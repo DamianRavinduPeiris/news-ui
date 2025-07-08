@@ -1,3 +1,12 @@
+body, html, #root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f7f8fa;
+  box-sizing: border-box;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +48,203 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Modern and simple UI styles for the news portal */
+.app-container {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fa;
+  min-height: 100vh;
+  color: #222;
+  width: 100vw;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: left;
+  margin: 2.5rem 0 2rem 3.5rem;
+  color: #2d3a4b;
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.layout {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 80vh;
+}
+
+.sidebar {
+  flex: 0 0 340px;
+  min-width: 260px;
+  max-width: 400px;
+  background: transparent;
+  border-radius: 16px;
+  box-shadow: none;
+  padding: 0;
+  height: fit-content;
+  align-self: flex-start;
+}
+
+.content {
+  flex: 1 1 700px;
+  min-width: 340px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  padding: 2.5rem 2rem;
+  min-height: 500px;
+  width: 100%;
+  transition: box-shadow 0.2s;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.news-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.news-headline {
+  cursor: pointer;
+  padding: 1.5rem 1.2rem;
+  border-radius: 18px;
+  background: #f7faff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  border: 1.5px solid #e3eafc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  width: 98%;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  background-clip: padding-box;
+  z-index: 1;
+  position: relative;
+}
+.news-headline:hover {
+  background: #e3eafc;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  transform: translateY(-2px) scale(1.01);
+  z-index: 2;
+}
+.headline {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1a2233;
+}
+.categories {
+  margin-top: 0.2rem;
+}
+.category-chip {
+  display: inline-block;
+  background: #cfe2ff;
+  color: #1a2233;
+  border-radius: 16px;
+  padding: 0.3rem 1.1rem;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.news-detail {
+  animation: fadeIn 0.3s;
+}
+.news-detail h2 {
+  margin-top: 0;
+}
+.news-content {
+  margin-top: 1.2rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+.back-btn {
+  background: #e3eafc;
+  border: none;
+  color: #2d3a4b;
+  border-radius: 6px;
+  padding: 0.4rem 1.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.back-btn:hover {
+  background: #c7d7f7;
+}
+.categories-list {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+.categories-list h3 {
+  margin: 0 0 1rem 0;
+  color: #2d3a4b;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.categories-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.categories-list li {
+  background: #e3eafc;
+  color: #1a2233;
+  border-radius: 16px;
+  padding: 0.3rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 0 0.5rem;
+  }
+  .sidebar, .content {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .categories-list {
+    padding: 1.2rem 0.7rem;
+  }
+  .content {
+    padding: 1.2rem 0.7rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
