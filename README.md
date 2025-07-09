@@ -31,7 +31,7 @@ A modern, responsive React application for browsing news by category.
 
 1. Clone the repository:
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/DamianRavinduPeiris/news-ui.git
    cd news-ui
    ```
 2. Install dependencies:
